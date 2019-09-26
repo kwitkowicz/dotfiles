@@ -6,6 +6,7 @@ FILES_TO_INSTALL="$FILES_TO_INSTALL vim"
 
 
 main() {
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
     for file in $FILES_TO_INSTALL; do
 
@@ -15,6 +16,8 @@ main() {
     	ln -s $sourceFile $targetFile 
 
     done
+
+    vim +PluginInstall +qall
 
 }
 
