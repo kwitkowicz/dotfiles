@@ -17,16 +17,19 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'"syntax checker for python
 
 call vundle#end()
 
 filetype plugin indent on
-syntax on 
+syntax on
 colorscheme dracula
 set encoding=utf-8
 set number
 set cursorline
-set autoindent 
+set autoindent
 set incsearch
 set hlsearch
 set backspace=indent,eol,start
@@ -45,3 +48,10 @@ map <C-n> :NERDTreeToggle<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
+"Airline and airline-themes
+let g:airline_theme='angr'
+"Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
