@@ -2,7 +2,6 @@
 
 
 FILES_TO_INSTALL=$(find . -maxdepth 1 -type f -not -name .git -not -name setup.sh -printf '%f\n')
-FILES_TO_INSTALL="$FILES_TO_INSTALL vim"
 BACKUP_DIR=~/dotfiles_old
 
 install_ctags(){
@@ -13,7 +12,7 @@ install_ctags(){
     ./configure --prefix=$HOME
     make
     make install
-    cd myDir
+    cd $myDir
 }
 
 install_some_stuff(){
