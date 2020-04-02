@@ -1,8 +1,35 @@
-# This is Git's per-user configuration file.
-[user]
-# Please adapt and uncomment the following lines:
-#	name = hk
-#	email = krzysiek@ubuntu.ubuntu-domain
+[core]
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/.gitignore
 
+[merge]
+    log = true
+    ff = false
+
+[push]
+    default = simple
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow bold
+    local = green bold
+    remote = cyan bold
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+
+# E.g user.name, user.email, credential.username, etc
 [include]
-path = ~/.gitconfig.local
+    path = ~/.gitconfig.local

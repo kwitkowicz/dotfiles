@@ -18,12 +18,17 @@ install_ctags(){
 install_some_stuff(){
     pip3 install flake8
     pip3 install bashate #style checker for bash scripts used by OpenStack
+
+    sudo dnf install cmake gcc-c++ make python3-devel
+    sudo dnf install golang
+    sudo dnf install npm
 }
 
 main() {
     install_ctags
     install_some_stuff
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 
     mkdir -p $BACKUP_DIR
 
